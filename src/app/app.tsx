@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 const App: React.FC<{ compiler: string, framework: string }> = (props) => {
   return (
     <div>
+      <div>hey</div>
       <div>{props.compiler}</div>
       <div>{props.framework}</div>
     </div>
