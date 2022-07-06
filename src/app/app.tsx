@@ -7,6 +7,7 @@ const App: React.FC<{ compiler: string, framework: string }> = (props) => {
       <div>hey</div>
       <div>{props.compiler}</div>
       <div>{props.framework}</div>
+      <div>{props.children.toString}</div>
     </div>
   );
 }
