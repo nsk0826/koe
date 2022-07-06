@@ -8,6 +8,7 @@ const App: React.FC<{ compiler: string, framework: string ,message:string}> = (p
       <div>{props.compiler}</div>
       <div>{props.framework}</div>
       <div>{props.message}</div>
+      <input type='text'></input>
     </div>
   );
 }
