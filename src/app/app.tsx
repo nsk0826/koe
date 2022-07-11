@@ -4,6 +4,11 @@ import ReactDOM from 'react-dom';
 
 const App: React.FC<{ compiler: string, framework: string, message: string, url: string }> = (props) => {
   const [selectedImage, setSelectedImage] = useState(null)
+  // 別の画像を使用するボタンを押した時の処理
+  const handleRemoveClicked = () => {
+    console.log('test!')
+    setSelectedImage(null)
+  }
   return (
     <div>
       <div>hey</div>
@@ -19,8 +24,15 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
           setSelectedImage(event.target.files[0])
         }}
       />
+      <button
+        className="remove-button"
+        onClick={handleRemoveClicked}
+      >
+        別の画像を使用する
+      </button>
     </div>
   );
+
 }
 
 ReactDOM.render(
