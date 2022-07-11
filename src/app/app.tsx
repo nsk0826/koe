@@ -9,6 +9,10 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
     console.log('test!')
     setSelectedImage(null)
   }
+
+  const handleHey = () => {
+    alert("hey")
+  }
   return (
     <div>
       <div>hey</div>
@@ -17,6 +21,12 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
       <div>{props.message}</div>
       <input type='text'></input>
       <div><a href={props.url}>{props.url}</a></div>
+      <button
+        className="remove-button"
+        onClick={handleHey}
+      >
+        hey
+      </button>
       <input
         type="file"
         name="ocr-image"
