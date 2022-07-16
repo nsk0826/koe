@@ -7,6 +7,7 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
   //
   const handleTest = () => {
     console.log('test!')
+    console.log(text)
     setText(null)
   }
 
@@ -15,7 +16,7 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
   }
 
   const handleHey = () => {
-    alert("hey")
+    alert("hey"+ text)
   }
   return (
     <div>
@@ -40,7 +41,7 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
         className="test-button"
         onClick={handleTest}
       >
-        別の画像を使用する
+        deleteTest
       </button>
     </div>
   );
