@@ -3,11 +3,15 @@ import { useState } from "react"
 import ReactDOM from 'react-dom';
 
 const App: React.FC<{ compiler: string, framework: string, message: string, url: string }> = (props) => {
-  const [selectedImage, setSelectedImage] = useState(null)
+  const [text, setText] = useState(null)
   //
   const handleTest = () => {
     console.log('test!')
-    setSelectedImage(null)
+    setText(null)
+  }
+
+  const handleSetText = () => {
+    setText("aaaa")
   }
 
   const handleHey = () => {
@@ -28,11 +32,9 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
         hey
       </button>
       <input
-        type="file"
-        name="ocr-image"
-        onChange={(event) => {
-          setSelectedImage(event.target.files[0])
-        }}
+        type="text"
+        name="text-input"
+        onChange={handleSetText}
       />
       <button
         className="test-button"
