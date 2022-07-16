@@ -12,7 +12,7 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
   }
 
   const handleSetText = () => {
-    setText("aaaa")
+    setText("sample")
   }
 
   const handleHey = () => {
@@ -35,7 +35,7 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
       <input
         type="text"
         name="text-input"
-        onChange={handleSetText}
+        onChange={handleSetText()}
       />
       <button
         className="test-button"
