@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 
 const App: React.FC<{ compiler: string, framework: string, message: string, url: string }> = (props) => {
   const [selectedImage, setSelectedImage] = useState(null)
-  // 別の画像を使用するボタンを押した時の処理
-  const handleRemoveClicked = () => {
+  //
+  const handleTest = () => {
     console.log('test!')
     setSelectedImage(null)
   }
@@ -22,7 +22,7 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
       <input type='text'></input>
       <div><a href={props.url}>{props.url}</a></div>
       <button
-        className="remove-button"
+        className="test-button"
         onClick={handleHey}
       >
         hey
@@ -35,8 +35,8 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
         }}
       />
       <button
-        className="remove-button"
-        onClick={handleRemoveClicked}
+        className="test-button"
+        onClick={handleTest}
       >
         別の画像を使用する
       </button>
