@@ -11,10 +11,9 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
     setText(null)
   }
 
-  const handleSetText = () => {
-    setText("sample")
+  const handleSetText = (e) =>{
+    setText(e.target.value);
   }
-
   const handleHey = () => {
     alert("hey"+ text)
   }
@@ -35,7 +34,7 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
       <input
         type="text"
         name="text-input"
-        onChange={}
+        onChange={handleSetText}
       />
       <button
         className="test-button"
