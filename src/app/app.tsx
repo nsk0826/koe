@@ -35,7 +35,7 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
       <input
         type="text"
         name="text-input"
-        onChange={handleSetText()}
+        onChange={}
       />
       <button
         className="test-button"
