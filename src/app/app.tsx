@@ -19,7 +19,7 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
   }
   return (
     <div>
-      <div>hey</div>
+      <div>{text}</div>
       <div>{props.compiler}</div>
       <div>{props.framework}</div>
       <div>{props.message}</div>
