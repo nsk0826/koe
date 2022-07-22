@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 
 const App: React.FC<{ compiler: string, framework: string, message: string, url: string }> = (props) => {
   const [text, setText] = useState(null)
+  const [color, setColor] = useState(null)
   //
   const handleTest = () => {
     console.log('test!')
@@ -17,9 +18,14 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
   const handleHey = () => {
     alert("hey"+ text)
   }
+
+  const handleColor = (e) => {
+    setColor(e.target.value);
+  }
   return (
     <div>
-      <div>{text}</div>
+      <div
+      　style="font :"{color}>{text}</div>
       <div>{props.compiler}</div>
       <div>{props.framework}</div>
       <div>{props.message}</div>
