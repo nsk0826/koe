@@ -19,9 +19,6 @@ const App: React.FC<{ compiler: string, framework: string, message: string, url:
     alert("hey"+ text)
   }
 
-  const handleColor = (e) => {
-    setColor(e.target.value);
-  }
   return (
     <div>
       <div>{text}</div>
